@@ -1,0 +1,13 @@
+${THIS_NAME} [-fbl R,G,B] [-x]
+  ANSI Escape Codeにおける文字、背景、下線の色を24bitカラーで設定するSGRコードを出力する。
+options:
+  -f R,G,B   \e[38;2;R;G;B  文字色を指定した色にする。
+  -b R,G,B   \e[48;2;R;G;B  背景色を指定した色にする。
+  -l R,G,B   \e[58;2;R;G;B  下線を指定した色にする。
+  -x         \e[59          下線の色をデフォルトにする。
+colors:
+  0 <= R,G,B <= 255
+examples:
+  ${THIS_NAME} -f 255,196,128 -b 0,96,128 -l 0,255,0
+  ${THIS_NAME} -x
+
